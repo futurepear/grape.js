@@ -10,7 +10,7 @@ server.balance((socket, req, rawheaders) => {
 });
 
 //create a new child process with id server1 and run the file server.js
-server.branch("server1", "server.js", {
+server.branch("server1", "subserver.js", {
   env: {
     environment: "env vars go here";
   }

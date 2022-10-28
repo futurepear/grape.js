@@ -15,3 +15,6 @@ server.branch("server1", "server.js", {
     environment: "env vars go here";
   }
 });
+
+//bind a port for the server to listen on
+server.listen(process.env.PORT);

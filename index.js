@@ -16,5 +16,15 @@ server.branch("server1", "subserver.js", {
   }
 });
 
+//you can send data over to processes by pinging them, send updateServers event to all child processes
+setInterval(() => {
+  server.broadcast("updateServers", "ANY DATA AS STRING");
+}, 1000);
+
+//you can recieve data with server.prototype.on("event", eventHandler)
+server.on("serverInfo", (data) => {
+
+});
+
 //bind a port for the server to listen on
 server.listen(process.env.PORT);

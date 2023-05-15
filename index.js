@@ -22,9 +22,13 @@ setInterval(() => {
 }, 1000);
 
 //you can recieve data with server.prototype.on("event", eventHandler)
+//RECIEVE MESSAGES SENT FROM SUBSERVERS WITH server.on method
 server.on("serverInfo", (data) => {
 
 });
+
+//send data to subserver like this:
+server.send("server1", "any data");
 
 //bind a port for the server to listen on
 server.listen(process.env.PORT);

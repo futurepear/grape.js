@@ -23,6 +23,7 @@ setInterval(() => {
 
 //you can recieve data with server.prototype.on("event", eventHandler)
 //RECIEVE MESSAGES SENT FROM SUBSERVERS WITH server.on method
+//I think you have to send the id of the server from subserver yourself - see the get id method under Branch class
 server.on("serverInfo", (data) => {
 
 });
